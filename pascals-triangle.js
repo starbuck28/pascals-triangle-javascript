@@ -1,8 +1,3 @@
-//
-// This is only a SKELETON file for the 'Pascals Triangle' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export const rows = (num) => {
   let triangle = []
 
@@ -10,16 +5,13 @@ export const rows = (num) => {
     triangle.push([1])
   }
 
-  if (num === 2) {
+  if (num >= 2) {
     triangle.push([1])
     triangle.push([1, 1])
   }
 
   if(num > 2) {
-    triangle.push([1])
-    triangle.push([1,1])
-
-    for ( let  i = 3; i <= num; i++) {
+    for ( let i = 3; i <= num; i++) {
       triangle.push([])
 
       let tempArray = triangle[i - 1]
